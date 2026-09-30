@@ -22,8 +22,10 @@ System.Console.WriteLine($"Username: {firstName.Substring(0, 1) + lastName}");
 System.Console.WriteLine($"Initials: {firstName.Substring(0, 1).ToUpper()}.{lastName.Substring(0, 1).ToUpper()}.");
 System.Console.WriteLine($"Letters in last name: {lastName.Length}");
 
-/*
-//Part 2: Write later
+
+/*Part 2: Generating a randomized number for a Student ID and a Locker: 
+* studentID should be six digits from 100000 through 999999 and locker number should be from 1-500
+*/
 
 System.Console.WriteLine($"Student ID: {rng.Next(100000, 1000000)}");
 System.Console.WriteLine($"Locker: {rng.Next(501)}");
@@ -32,4 +34,3 @@ System.Console.WriteLine($"Locker: {rng.Next(501)}");
 
 System.Console.WriteLine($"Distance: ");
 System.Console.WriteLine($"Walk time: ");
-*/
