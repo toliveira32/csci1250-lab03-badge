@@ -8,6 +8,8 @@
 
 //Part 1: Requesting the user for their full name: formulate their full name into a username that matches instructions for a badge
 
+using System.Security.Cryptography;
+
 System.Console.Write("Hello, What is your full name? ");
 string fullName = Console.ReadLine();
 
@@ -64,3 +66,17 @@ int walkingTimeSeconds = walkingTimeFullSeconds % 60;
 
 System.Console.WriteLine($"Distance: {distance} feet");
 System.Console.WriteLine($"Walk time: {walkingTimeMinutes} minutes {walkingTimeSeconds} seconds");
+
+//Part 4: Printing the finished Badge to the user, following the proper formating requirements
+
+int checkDigit = randomStudentId % 9;
+string labelBars = "==================================";
+//System.Console.WriteLine(labelBars.Length);
+string etsuStudentBadge = "\tETSU STUDENT BADGE";
+System.Console.WriteLine($"{labelBars}\n{etsuStudentBadge}\n{labelBars}");
+System.Console.WriteLine("Name".PadRight(10) + fullName.ToUpper());
+System.Console.WriteLine("USERNAME".PadRight(10) + userName);
+System.Console.WriteLine("ID".PadRight(10) + randomStudentId + "-" + checkDigit);
+System.Console.WriteLine("LOCKER".PadRight(10) + randomLockerNumber);
+System.Console.WriteLine("WALK".PadRight(10) + walkingTimeMinutes + " " + "min" + " " + walkingTimeSeconds + " " + "sec");
+System.Console.WriteLine($"{labelBars}");
